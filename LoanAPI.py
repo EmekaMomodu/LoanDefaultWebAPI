@@ -1,9 +1,9 @@
 # Dependencies
-from flask import Flask, request, jsonify
-import joblib
-import traceback
-import pandas as pd
 import sys
+import traceback
+import joblib
+import pandas as pd
+from flask import Flask, request, jsonify
 
 # API definition
 app = Flask(__name__)
@@ -44,4 +44,5 @@ if __name__ == '__main__':
     model_columns = joblib.load('model_columns.pkl')  # Load model_columns.pkl
     print('Model columns loaded')
 
+    print('API Starting...')
     app.run(port=port, debug=True)
