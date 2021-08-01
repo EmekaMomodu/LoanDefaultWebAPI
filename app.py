@@ -4,6 +4,7 @@ import traceback
 import joblib
 import pandas as pd
 from flask import Flask, request, jsonify
+import os
 
 # API definition
 app = Flask(__name__)
@@ -38,10 +39,16 @@ if __name__ == '__main__':
     except:
         port = 3000  # if you don't provide any port the port will be set to 1
 
-    model = joblib.load('machine_learning_files/model.pkl')  # Load model.pkl
+    currentAbsolutePath = os.path.dirname(os.path.abspath(__file__))
+
+    modelPath = currentAbsolutePath + '/machine_learning_files/model.pkl'
+
+    model = joblib.load(modelPath)  # Load model.pkl
     print('Model loaded')
 
-    model_columns = joblib.load('machine_learning_files/model_columns.pkl')  # Load model_columns.pkl
+    modelColumnsPath = currentAbsolutePath + '/machine_learning_files/model_columns.pkl'
+
+    model_columns = joblib.load(modelColumnsPath)  # Load model_columns.pkl
     print('Model columns loaded')
 
     print('API Starting...')
