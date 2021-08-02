@@ -3,3 +3,5 @@ pandas~=1.3.1
 Flask~=2.0.1
 uwsgi
 psycopg2
+catboost
+scikit-learn
