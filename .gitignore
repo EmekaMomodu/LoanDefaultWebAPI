@@ -1,5 +1,4 @@
 venv
-machine_learning_files/catboost_info
 .idea
 .DS_Store
 __pycache__/
