@@ -51,7 +51,6 @@ if __name__ == '__main__':
     # except:
     #     port = 3000  # if you don't provide any port the port will be set to 1
 
-
     # @app.before_first_request
     # def load_machine_learning_models():
     #     currentAbsolutePath = os.path.dirname(os.path.abspath(__file__))
